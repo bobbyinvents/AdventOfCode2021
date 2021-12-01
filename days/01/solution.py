@@ -14,8 +14,8 @@ def part_1(x):
 def part_2(x):
     n = 0
     for i in range(len(x) - 3):
-        a = sum([x[i], x[i + 1], x[i + 2]])
-        b = sum([x[i + 1], x[i + 2], x[i + 3]])
+        a = sum(x[i:i+3])
+        b = sum(x[i+1:i+4])
         if a < b:
             n += 1
     return n
